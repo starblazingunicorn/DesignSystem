@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@stencil/core": "^2.13.0",
+    "@stencil/sass": "^3.0.4",
     "vite": "^4.3.8"
   },
   "devDependencies": {

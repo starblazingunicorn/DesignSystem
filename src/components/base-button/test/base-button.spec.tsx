@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { PrimaryButton } from '../primary-button';
+import { BaseButton } from '../base-button';
 
-describe('primary-button', () => {
+describe('base-button', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [PrimaryButton],
-      html: `<primary-button></primary-button>`,
+      components: [BaseButton],
+      html: `<base-button></base-button>`,
     });
     expect(page.root).toEqualHtml(`
-      <primary-button>
+      <base-button>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </primary-button>
+      </base-button>
     `);
   });
 });

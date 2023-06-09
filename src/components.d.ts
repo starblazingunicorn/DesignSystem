@@ -6,34 +6,34 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface PrimaryButton {
-        "name": string;
+    interface BaseButton {
+        "bText": string;
     }
 }
 declare global {
-    interface HTMLPrimaryButtonElement extends Components.PrimaryButton, HTMLStencilElement {
+    interface HTMLBaseButtonElement extends Components.BaseButton, HTMLStencilElement {
     }
-    var HTMLPrimaryButtonElement: {
-        prototype: HTMLPrimaryButtonElement;
-        new (): HTMLPrimaryButtonElement;
+    var HTMLBaseButtonElement: {
+        prototype: HTMLBaseButtonElement;
+        new (): HTMLBaseButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "primary-button": HTMLPrimaryButtonElement;
+        "base-button": HTMLBaseButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface PrimaryButton {
-        "name"?: string;
+    interface BaseButton {
+        "bText"?: string;
     }
     interface IntrinsicElements {
-        "primary-button": PrimaryButton;
+        "base-button": BaseButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "primary-button": LocalJSX.PrimaryButton & JSXBase.HTMLAttributes<HTMLPrimaryButtonElement>;
+            "base-button": LocalJSX.BaseButton & JSXBase.HTMLAttributes<HTMLBaseButtonElement>;
         }
     }
 }

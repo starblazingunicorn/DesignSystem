@@ -1,4 +1,4 @@
-# primary-button
+# base-button
 
 
 
@@ -9,7 +9,7 @@
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
-| `name`   | `name`    |             | `string` | `undefined` |
+| `bText`  | `b-text`  |             | `string` | `undefined` |
 
 
 ----------------------------------------------

@@ -12,7 +12,7 @@
   "unpkg": "dist/design-system/design-system.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
   },
   "files": [
     "dist/",
@@ -25,7 +25,8 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_7c471b671e1ab58"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0",
@@ -49,6 +50,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/jest": "^27.0.3",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.18.2",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "puppeteer": "^20.3.0",
@@ -56,5 +58,11 @@
     "react-dom": "^18.2.0",
     "storybook": "^7.0.12"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ionic-team/stencil-component-starter/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/ionic-team/stencil-component-starter#readme",
+  "_id": "design-system@0.0.1"
 }

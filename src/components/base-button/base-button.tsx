@@ -6,16 +6,17 @@ import { Component, Host, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class BaseButton {
-
   @Prop() bText: string;
-
-  
+  @Prop() ariaLabel: string;
   render() {
     return (
       <Host>
-         <div>{this.bText}</div>
+        <div>
+          <button type="submit" class="button" aria-label={this.ariaLabel}>
+            {this.bText}
+          </button>
+        </div>
       </Host>
     );
   }
-
 }

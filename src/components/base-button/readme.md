@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `bText`  | `b-text`  |             | `string` | `undefined` |
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+| `ariaLabel` | `aria-label` |             | `string` | `undefined` |
+| `bText`     | `b-text`     |             | `string` | `undefined` |
 
 
 ----------------------------------------------

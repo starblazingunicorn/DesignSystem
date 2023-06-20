@@ -5,10 +5,12 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { BaseButtonVariation } from "./components/base-button/base-button-variants";
 export namespace Components {
     interface BaseButton {
         "ariaLabel": string;
         "bText": string;
+        "bVariation": `${BaseButtonVariation}`;
     }
 }
 declare global {
@@ -26,6 +28,7 @@ declare namespace LocalJSX {
     interface BaseButton {
         "ariaLabel"?: string;
         "bText"?: string;
+        "bVariation"?: `${BaseButtonVariation}`;
     }
     interface IntrinsicElements {
         "base-button": BaseButton;

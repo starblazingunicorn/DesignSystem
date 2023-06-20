@@ -1,4 +1,5 @@
 import { Component, Host, Prop, h } from '@stencil/core';
+import { BaseButtonVariation } from './base-button-variants';
 
 @Component({
   tag: 'base-button',
@@ -8,11 +9,23 @@ import { Component, Host, Prop, h } from '@stencil/core';
 export class BaseButton {
   @Prop() bText: string;
   @Prop() ariaLabel: string;
+  @Prop() bVariation: `${BaseButtonVariation}` = BaseButtonVariation.Secondary;
+ 
+  get cssModifier(){
+    return [`base-button--variation-${this.bVariation}`];
+  };
+
+ 
+
   render() {
     return (
       <Host>
         <div>
-          <button type="submit" class="button" aria-label={this.ariaLabel}>
+          <button 
+            class="button" 
+            aria-label={this.ariaLabel} 
+            role="button" 
+            type={this.bVariation}>
             {this.bText}
           </button>
         </div>

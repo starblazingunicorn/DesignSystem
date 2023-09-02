@@ -56,7 +56,9 @@
     "puppeteer": "^20.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.0.12"
+    "storybook": "^7.0.12",
+    "nx": "16.7.4",
+    "nx-cloud": "latest"
   },
   "license": "MIT",
   "bugs": {
@@ -64,5 +66,8 @@
   },
   "readme": "ERROR: No README data found!",
   "homepage": "https://github.com/ionic-team/stencil-component-starter#readme",
-  "_id": "design-system@0.0.1"
+  "_id": "design-system@0.0.1",
+  "nx": {
+    "targets": {}
+  }
 }

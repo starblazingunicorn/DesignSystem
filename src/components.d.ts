@@ -5,8 +5,17 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { AvatarVariation } from "./components/base-avatar/base-avatar-variation.enum";
+import { AvatarSize } from "./components/base-avatar/base-avatar-size.enum";
 import { BaseButtonVariation } from "./components/base-button/base-button-variants";
 export namespace Components {
+    interface BaseAvatar {
+        "bAllt": string;
+        "bHeight": number;
+        "bSize": AvatarSize;
+        "bVariation": AvatarVariation;
+        "bWidth": number;
+    }
     interface BaseButton {
         "ariaLabel": string;
         "bText": string;
@@ -14,6 +23,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLBaseAvatarElement extends Components.BaseAvatar, HTMLStencilElement {
+    }
+    var HTMLBaseAvatarElement: {
+        prototype: HTMLBaseAvatarElement;
+        new (): HTMLBaseAvatarElement;
+    };
     interface HTMLBaseButtonElement extends Components.BaseButton, HTMLStencilElement {
     }
     var HTMLBaseButtonElement: {
@@ -21,16 +36,25 @@ declare global {
         new (): HTMLBaseButtonElement;
     };
     interface HTMLElementTagNameMap {
+        "base-avatar": HTMLBaseAvatarElement;
         "base-button": HTMLBaseButtonElement;
     }
 }
 declare namespace LocalJSX {
+    interface BaseAvatar {
+        "bAllt"?: string;
+        "bHeight"?: number;
+        "bSize"?: AvatarSize;
+        "bVariation"?: AvatarVariation;
+        "bWidth"?: number;
+    }
     interface BaseButton {
         "ariaLabel"?: string;
         "bText"?: string;
         "bVariation"?: `${BaseButtonVariation}`;
     }
     interface IntrinsicElements {
+        "base-avatar": BaseAvatar;
         "base-button": BaseButton;
     }
 }
@@ -38,6 +62,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "base-avatar": LocalJSX.BaseAvatar & JSXBase.HTMLAttributes<HTMLBaseAvatarElement>;
             "base-button": LocalJSX.BaseButton & JSXBase.HTMLAttributes<HTMLBaseButtonElement>;
         }
     }
